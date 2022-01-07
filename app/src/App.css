@@ -59,7 +59,7 @@
 
 .connect-wallet-button {
   color: white;
-  background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
+  background: -webkit-linear-gradient(left, #fd8d01, #b2020d);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }

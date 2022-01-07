@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import twitterLogo from './assets/twitter-logo.svg';
+import DBZ_LOGO from './assets/dbz.png';
 import CandyMachine from './CandyMachine';
-
-// Constants
-const TWITTER_HANDLE = '_buildspace';
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
   const [walletAddress, setWalletAddress] = useState(null);
@@ -84,20 +80,10 @@ const App = () => {
     <div className='App'>
       <div className='container'>
         <div className='header-container'>
-          <p className='header'>🍭 Candy Drop</p>
-          <p className='sub-text'>NFT drop machine with fair mint</p>
+          <img alt='Logo' src={DBZ_LOGO} style={{width: '600px'}} />
           {!walletAddress && renderNotConnectedContainer()}{' '}
         </div>
         {walletAddress && <CandyMachine walletAddress={window.solana} />}
-        <div className='footer-container'>
-          <img alt='Twitter Logo' className='twitter-logo' src={twitterLogo} />
-          <a
-            className='footer-text'
-            href={TWITTER_LINK}
-            target='_blank'
-            rel='noreferrer'
-          >{`built on @${TWITTER_HANDLE}`}</a>
-        </div>
       </div>
     </div>
   );
