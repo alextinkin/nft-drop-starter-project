@@ -80,7 +80,9 @@ const App = () => {
     <div className='App'>
       <div className='container'>
         <div className='header-container'>
-          <img alt='Logo' src={DBZ_LOGO} style={{width: '600px'}} />
+          <div>
+            <img alt='Logo' src={DBZ_LOGO} style={{width: '600px'}} />
+          </div>
           {!walletAddress && renderNotConnectedContainer()}{' '}
         </div>
         {walletAddress && <CandyMachine walletAddress={window.solana} />}
